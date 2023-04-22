@@ -10,14 +10,8 @@ export class PrismaUsersRepository implements UserRepository {
   async update(userId: string, user: User): Promise<void> {
     const prismaUserData = PrismaUserMapper.toPrisma(user);
 
-    const getUser = await this.prisma.user.findUnique({
-      where: {
-        id: userId,
-      },
-    });
-
     await this.prisma.user.update({
-      where: { id: getUser.id },
+      where: { id: userId },
       data: prismaUserData,
     });
   }

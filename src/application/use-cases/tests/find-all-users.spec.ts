@@ -1,4 +1,4 @@
-import { InMemoryUsersRepository } from '../../repositories/users-in-memory-repository';
+import { InMemoryUsersRepository } from '../../repositories/in-memory/users-in-memory-repository';
 import { FindAllUsers } from '../find-all-users';
 import { makeUser } from './factories/user.factory';
 
