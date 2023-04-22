@@ -1,5 +1,5 @@
 import { Body, Controller, Post, Get, Param } from '@nestjs/common';
-import { ApiBody, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiBody, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
 import { CreateUserDTO } from '../dtos/create-user.dto';
 import { CreateUser } from '../../../application/use-cases/create-user';
@@ -8,6 +8,7 @@ import { UserViewModel } from '../view-models/user.view-model';
 import { User } from 'src/application/entities/user';
 import { FindUserById } from 'src/application/use-cases/find-user-by-id';
 
+@ApiTags('users')
 @Controller('users')
 export class UsersController {
   constructor(
