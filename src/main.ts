@@ -12,7 +12,6 @@ async function bootstrap() {
     .setTitle('Users API')
     .setDescription('The users API following clean architecture concepts')
     .setVersion('1.0')
-    .addTag('users')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

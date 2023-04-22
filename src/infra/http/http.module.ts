@@ -4,10 +4,11 @@ import { UsersController } from './controllers/users.controller';
 import { CreateUser } from 'src/application/use-cases/create-user';
 import { FindAllUsers } from 'src/application/use-cases/find-all-users';
 import { FindUserById } from 'src/application/use-cases/find-user-by-id';
+import { UpdateUser } from 'src/application/use-cases/update-user';
 
 @Module({
   imports: [DatabaseModule],
   controllers: [UsersController],
-  providers: [CreateUser, FindAllUsers, FindUserById],
+  providers: [CreateUser, FindAllUsers, FindUserById, UpdateUser],
 })
 export class HttpModule {}
