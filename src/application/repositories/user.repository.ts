@@ -4,4 +4,5 @@ export abstract class UserRepository {
   abstract create(user: User): Promise<void>;
   abstract findAllUsers(): Promise<User[]>;
   abstract findOneUser(userId: string): Promise<User>;
+  abstract update(userId: string, user: User): Promise<void>;
 }
