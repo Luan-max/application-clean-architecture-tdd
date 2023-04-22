@@ -15,4 +15,10 @@ export class PrismaUsersRepository implements UserRepository {
       data: prismaUserData,
     });
   }
+
+  async findAllUsers(): Promise<User[]> {
+    const users = await this.prisma.user.findMany();
+
+    return users.map(PrismaUserMapper.toDomain);
+  }
 }
